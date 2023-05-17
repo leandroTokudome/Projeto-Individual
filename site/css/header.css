@@ -36,6 +36,11 @@
     transition: 0.3s;
 }
 
+.header li:not(:hover) {
+    transform: translateY(2px);
+    transition: 0.3s;
+}
+
 .header a {
     font-size: 20px;
     text-decoration: none;
@@ -43,7 +48,15 @@
 }
 
 .header a:hover {
-    text-decoration: underline #ed8975;
+    text-decoration: underline #b2e7e8;
+    color: #b2e7e8;
+    transition: 0.3s;
+}
+
+.header a:not(:hover) {
+    text-decoration: none;
+    color: #f2d096;
+    transition: 0.3s;
 }
 
 .header span {

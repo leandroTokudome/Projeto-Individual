@@ -9,6 +9,7 @@
     <link rel="icon" href="../images/logo.png">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/header.css">
+    <script src="../js/scripts.js"></script>
 </head>
 
 <body>
@@ -101,7 +102,7 @@
                 ficar ainda mais rico (no jogo).
                 <br><br>
                 <span class="line">
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    ~~~ /// ~~~ /// ~~~
                 </span>
                 <br><br>
                 <b class="subTitulo">Eu e os Jogos Clicker:</b>
@@ -127,7 +128,7 @@
                 para <span>aprimorar</span> nos jogos clicker.
                 <br><br>
                 <span class="line">
-                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                    ~~~ /// ~~~ /// ~~~
                 </span>
                 <br><br>
                 <b class="subTitulo">Recomendações:</b>
@@ -149,6 +150,36 @@
     </div>
 
     <!-- Fim do "Jogos Clicker / Idle" -->
+
+    <!-- Início do "Teste de Click" -->
+
+    <div class="testeClick">
+        <div class="container">
+            <h1>Teste de Click (Velocidade)</h1>
+            <p>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Esse é um teste de velocidade de clicks. Você terá <span>10
+                    segundos</span> para clicar o máximo possível no botão abaixo.
+            </p>
+            <span id="timer">
+                <span id="segundos">0</span>:<span id="milisegundos">00</span>
+            </span>
+            <span id="clicksDisplay">
+                Clicks: 0
+            </span>
+            <br><br>
+            <button onclick="clicar()" id="btnClicar">Clica Aqui!</button>
+            <button onclick="resetar()">Resetar</button>
+            <div id="cpsDisplay">
+                Clicks por Segundo: 0
+            </div>
+        </div>
+
+        <dialog id="bloco">
+            Olá
+        </dialog>
+    </div>
+
+    <!-- Fim do "Teste de Click" -->
 
 </body>
 

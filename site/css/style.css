@@ -1,6 +1,7 @@
 body {
    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     margin: 0px;
+    overflow-x: hidden;
 }
 
 .container {
@@ -42,6 +43,13 @@ body {
     transition: 0.3s;
 }
 
+.banner1 p:not(:hover) {
+    transform: scale(1);
+    border-left: #b2e7e8 solid 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
 .banner1 b {
     color: #ed8975;
 }
@@ -54,7 +62,7 @@ body {
     display: flex;
     align-items: center;
     background-color: #304d63;
-    height: 850px;
+    height: 1000px;
     border-bottom: #ed8975 solid 2px;
 }
 
@@ -80,6 +88,14 @@ body {
     transition: 0.3s;
 }
 
+.sobreProjeto h1:not(:hover) {
+    transform: translateY(4px);
+    color: #b2e7e8;
+    border-left: #b2e7e8 solid 8px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
 .sobreProjeto p {
     color: #f2d096;
     font-size: 35px;
@@ -97,7 +113,7 @@ body {
 .jogosClicker {
     display: flex;
     background-color: #323232;
-    height: 2450px;
+    height: 2600px;
     align-items: center;
     border-bottom: #ed8975 solid 2px;
 }
@@ -123,6 +139,14 @@ body {
     transition: 0.3s;
 }
 
+.jogosClicker h1:not(:hover) {
+    transform: translateY(4px);
+    color: #b2e7e8;
+    border-radius: 8px;
+    border-left: #b2e7e8 solid 8px;
+    transition: 0.3s;
+}
+
 .jogosClicker p {
     color: #f2d096;
     font-size: 35px;
@@ -140,6 +164,11 @@ body {
     transition: 0.3s;
 }
 
+.jogosClicker .subTitulo:not(:hover) {
+    color: #b2e7e8;
+    transition: 0.3s;
+}
+
 .jogosClicker p span {
     color: #ed8975;
     font-weight: bold;
@@ -148,7 +177,7 @@ body {
 .jogosClicker .listaJogos {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 3%;
+    margin-top: 2.5%;
     align-items: center;
     height: 100%;
 }
@@ -158,9 +187,6 @@ body {
     text-decoration: none;
     color: #b2e7e8;
     font-weight: bolder;
-}
-
-.jogosClicker .listaJogos a{
     border-bottom: #b2e7e8 solid 8px;
     border-radius: 8px;
     padding-bottom: 0.2%;
@@ -175,10 +201,118 @@ body {
     transition: 0.3s;
 }
 
+.jogosClicker .listaJogos a:not(:hover) {
+    color: #b2e7e8;
+    border-bottom: #b2e7e8 solid 8px;
+    border-radius: 8px;
+    transform: scale(1);
+    transition: 0.3s;
+}
+
 .jogosClicker .line {
-    color: #304d63;
+    color: #8fb9aa;
 }
 
 /* Fim do "Jogos Clicker / Idle" */
+
+/* Início do "Teste de Click" */
+
+.testeClick {
+    background-color: #304d63;
+    height: 1100px;
+    border-bottom: #ed8975 solid 2px;
+}
+
+.testeClick .container {
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.testeClick h1 {
+    color: #b2e7e8;
+    font-size: 62px;
+    border-left: #b2e7e8 solid 8px;
+    padding-left: 3%;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+.testeClick h1:hover {
+    transform: translateY(-4px);
+    color: #ed8975;
+    border-radius: 0px;
+    border-left: #ed8975 solid 8px;
+    transition: 0.3s;
+}
+
+.testeClick h1:not(:hover) {
+    transform: translateY(4px);
+    color: #b2e7e8;
+    border-radius: 8px;
+    border-left: #b2e7e8 solid 8px;
+    transition: 0.3s;
+}
+
+.testeClick p {
+    color: #f2d096;
+    font-size: 35px;
+    text-align: justify;
+}
+
+.testeClick p span {
+    color: #ed8975;
+    font-weight: bold;
+}
+
+.testeClick #btnClicar {
+    height: 50%;
+    border-radius: 20px;
+    border: #ed8975 solid 2px;
+    font-size: 60px;
+    -webkit-text-stroke: #ed8975 1px;
+    font-weight: bold;
+    color: #f2d096;
+    background-color: #8fb9aa;
+}
+
+.testeClick #btnClicar:hover {
+    cursor: pointer;
+    border: #b2e7e8 solid 2px;
+    font-size: 65px;
+    -webkit-text-stroke: #b2e7e8 1px;
+    color: #ed8975;
+    background-color: #f2d096;
+    transition: 0.2s;
+}
+
+.testeClick #btnClicar:not(:hover) {
+    border: #ed8975 solid 2px;
+    font-size: 60px;
+    -webkit-text-stroke: #ed8975 1px;
+    font-weight: bold;
+    color: #f2d096;
+    background-color: #8fb9aa;
+    transition: 0.3s;
+}
+
+.testeClick #btnReiniciar {
+    
+}
+
+.testeClick #timer {
+    display: flex;
+    justify-content: center;
+    font-size: 62px;
+    background-color: #ed8975;
+    border-radius: 20px;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    border: #b2e7e8 solid 2px;
+    color: #304d63;
+}
+
+/* Fim do "Teste de Click" */
+
 
 
