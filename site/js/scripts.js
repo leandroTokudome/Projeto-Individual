@@ -51,4 +51,6 @@ function resetar() {
     milisegundo = 0
     milisegundos.innerHTML = `00`
     clicks = 0
+    clicksDisplay.innerHTML = `Clicks: 0`
+    cpsDisplay.innerHTML = `Clicks por Segundo: 0`
 }

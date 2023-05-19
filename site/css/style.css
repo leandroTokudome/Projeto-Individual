@@ -211,6 +211,9 @@ body {
 
 .jogosClicker .line {
     color: #8fb9aa;
+    display: flex;
+    justify-content: center;
+    margin-top: 1%;
 }
 
 /* Fim do "Jogos Clicker / Idle" */
@@ -219,7 +222,7 @@ body {
 
 .testeClick {
     background-color: #304d63;
-    height: 1100px;
+    height: 1450px;
     border-bottom: #ed8975 solid 2px;
 }
 
@@ -266,7 +269,7 @@ body {
 }
 
 .testeClick #btnClicar {
-    height: 50%;
+    height: 20%;
     border-radius: 20px;
     border: #ed8975 solid 2px;
     font-size: 60px;
@@ -297,11 +300,55 @@ body {
 }
 
 .testeClick #btnReiniciar {
-    
+    margin-top: 2%;
+    height: 5%;
+    border-radius: 12px;
+    border: #ed8975 solid 2px;
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-text-stroke: #ed8975 0.3px;
+    color: #304d63;
+    background-color: #8fb9aa;
+}
+
+.testeClick #btnReiniciar:hover {
+    cursor: pointer;
+    border: #b2e7e8 solid 2px;
+    font-size: 35px;
+    -webkit-text-stroke: #b2e7e8 0.3px;
+    color: #ed8975;
+    background-color: #f2d096;
+    transition: 0.2s;
+}
+
+.testeClick #btnReiniciar:not(:hover) {
+    border-radius: 12px;
+    border: #ed8975 solid 2px;
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-text-stroke: #ed8975 0.3px;
+    color: #304d63;
+    background-color: #8fb9aa;
+    transition: 0.2s;
+}
+
+.testeClick #clicksDisplay, .testeClick #cpsDisplay {
+width: 100%;
+text-align: center;
+font-size: 30px;
+background-color: #f2d096;
+border-radius: 20px;
+padding-top: 1%;
+padding-bottom: 1%;
+border: #b2e7e8 solid 2px;
+color: #304d63;
+margin-top: 2%;
+-webkit-text-stroke: #ed8975 0.3px;
 }
 
 .testeClick #timer {
     display: flex;
+    margin-bottom: 2%;
     justify-content: center;
     font-size: 62px;
     background-color: #ed8975;
@@ -314,5 +361,40 @@ body {
 
 /* Fim do "Teste de Click" */
 
+/* Início do Footer */
 
+.footer {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #304d63;
+    color: #f2d096;
+    height: 250px;
+    font-size: 20px;
+}
+
+.footer .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer p b {
+    color: #ed8975;
+}
+
+.footer a {
+    text-decoration: underline;
+    color: #f2d096;
+}
+
+.footer a:hover {
+    color: #b2e7e8;
+    transition: 0.3s;
+}
+
+.footer a:not(:hover) {
+    color: #f2d096;
+    transition: 0.3s;
+}
+
+/* Fim do Footer */
 

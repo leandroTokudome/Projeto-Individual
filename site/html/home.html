@@ -24,7 +24,7 @@
                 <span>|</span>
                 <li><a target="_self" href="home.html#jogosClickerId">Jogos<br>Clicker / Idle</a></li>
                 <span>|</span>
-                <li><a href="">Teste<br>de Click</a></li>
+                <li><a target="_self" href="home.html#testeClickId">Teste<br>de Click</a></li>
                 <span>|</span>
                 <li><a href="">Pesquisa</a></li>
                 <span>|</span>
@@ -153,7 +153,7 @@
 
     <!-- Início do "Teste de Click" -->
 
-    <div class="testeClick">
+    <div class="testeClick" id="testeClickId">
         <div class="container">
             <h1>Teste de Click (Velocidade)</h1>
             <p>
@@ -168,18 +168,32 @@
             </span>
             <br><br>
             <button onclick="clicar()" id="btnClicar">Clica Aqui!</button>
-            <button onclick="resetar()">Resetar</button>
             <div id="cpsDisplay">
                 Clicks por Segundo: 0
             </div>
+            <button onclick="resetar()" id="btnReiniciar">Reiniciar</button>
         </div>
-
-        <dialog id="bloco">
-            Olá
-        </dialog>
     </div>
 
     <!-- Fim do "Teste de Click" -->
+
+    <!-- Início do Footer -->
+
+    <div class="footer">
+        <div class="container">
+            <p>
+                Projeto Individual de Pesquisa e inovação - <b>Jogos Clicker / Idle</b>
+            </p>
+            <p>
+                <a href="https://github.com/leandroTokudome/Projeto-Individual">Projeto no GitHub</a>
+            </p>
+            <p>
+                Feito por <b>Leandro Akio Tokudome</b>
+            </p>
+        </div>
+    </div>
+
+    <!-- Fim do Footer -->
 
 </body>
 
