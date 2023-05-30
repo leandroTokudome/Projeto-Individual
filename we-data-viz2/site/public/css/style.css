@@ -16,7 +16,7 @@ body {
 
 .banner1 {
     height: 900px;
-    background-image: url("Projeto-Individual\we-data-viz2\site\public\images\bannerPrincipal.jpg");
+    background-image: url("../images/bannerPrincipal.jpg");
     background-size: cover;
     background-position: center;
     border-bottom: #ed8975 solid 2px;
@@ -58,14 +58,14 @@ body {
 
 /* Fim do Banner 1 */
 
-/* Início do "Sobre o Projeto" */
+/* Início do "Sobre o Porjeto" */
 
 .sobreProjeto {
     display: flex;
     flex: 1;
     align-items: center;
     background-color: #304d63;
-    height: 1000px;
+    height: 1000%;
     border-bottom: #ed8975 solid 2px;
 }
 
@@ -111,7 +111,7 @@ body {
     color: #ed8975;
 }
 
-/* Fim do "Sobre o Projeto" */
+/* Fim do "Sobre o Porjeto" */
 
 /* Início do "Jogos Clicker / Idle" */
 
@@ -119,7 +119,7 @@ body {
     display: flex;
     flex: 1;
     background-color: #323232;
-    height: 2600px;
+    height: 2600%;
     align-items: center;
     border-bottom: #ed8975 solid 2px;
 }
@@ -538,8 +538,8 @@ body {
 /* Início do "Meu Jogo Clicker" */
 
 .meuJogo {
-    background-color: #304d63;
-    height: 1000px;
+    background-color: #323232;
+    height: 1000%;
     flex: 1;
     border-bottom: #ed8975 solid 2px;
 }
@@ -548,8 +548,8 @@ body {
     height: 100%;
     flex-direction: column;
     justify-content: center;
-    margin-top: 200px;
-    margin-bottom: 200px;
+    margin-top: 30px;
+    margin-bottom: 230px;
 }
 
 .meuJogo h1 {
