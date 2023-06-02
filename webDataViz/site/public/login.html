@@ -42,12 +42,12 @@
         <div class="container">
             <div class="box">
                 <h1>LogIn</h1>
-                <p>Nome:</p>
-                <input type="text">
+                <p>Email:</p>
+                <input type="text" id="email">
                 <p>Senha:</p>
-                <input type="password">
-                <button>Entrar</button>
-                <a href="registro.html">Crie sua Conta Aqui!</a>
+                <input type="password" id="senha">
+                <button onclick="entrar()">Entrar</button>
+                <a href="cadastro.html">Crie sua Conta Aqui!</a>
             </div>
         </div>
     </div>
@@ -76,3 +76,54 @@
 </body>
 
 </html>
+
+<script>
+
+        function entrar() {
+
+        var emailVar = email.value;
+        var senhaVar = senha.value;
+
+        if (emailVar == "" || senhaVar == "") {
+            return false;
+        }
+
+        console.log("FORM LOGIN: ", emailVar);
+        console.log("FORM SENHA: ", senhaVar);
+
+        fetch("/usuarios/autenticar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                emailServer: emailVar,
+                senhaServer: senhaVar
+            })
+        }).then(function (resposta) {
+            console.log("ESTOU NO THEN DO entrar()!")
+
+            if (resposta.ok) {
+
+                resposta.json().then(json => {
+
+                    sessionStorage.EMAIL_USUARIO = json.email;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.idUsuario;
+
+                    setTimeout(function () {
+                        window.location = "/dinheirosClicker/game.html";
+                    }, 1000); // apenas para exibir o loading
+
+                });
+
+            } else {
+                console.log("Houve um erro ao tentar realizar o login!");
+            }
+
+        })
+
+        return false;
+    }
+
+</script>

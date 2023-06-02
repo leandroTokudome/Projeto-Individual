@@ -44,7 +44,9 @@ dpcPercent = 0
 upgOn = false
 dpc = 1
 
-document.getElementById("dinheirosButton").addEventListener("click", function removeFocus() {
+var botaoDinheiros = document.getElementById("dinheirosButton") 
+
+botaoDinheiros.addEventListener("click", function removeFocus() {
     this.blur();
 })
 
