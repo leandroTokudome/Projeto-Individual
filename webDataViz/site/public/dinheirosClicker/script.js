@@ -191,3 +191,24 @@ function simplifyBuild(realCost, idBuild) {
 }
 
 second()
+
+function salvar() {
+    var dinheirosVar = realDinheiros;
+    var fkUsuario = sessionStorage.ID_USUARIO
+
+    fetch("/usuarios/upar", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            dinheirosServer: dinheirosVar,
+            fkUsuarioServer: fkUsuario
+        })
+    }).then()
+    .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+    })
+
+    return false;
+}
