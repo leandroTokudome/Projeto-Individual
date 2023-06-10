@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinheiros Clicker - Rank</title>
+    <link rel="icon" href="images/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/header.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <!-- Início do Header -->
+
+    <div class="header">
+        <div class="container">
+            <img src="images/logo.png" alt="">
+            <ul>
+                <span>|</span>
+                <li><a target="_self" href="index.html#sobreProjetoId">Sobre o<br>Projeto</a></li>
+                <span>|</span>
+                <li><a target="_self" href="index.html#jogosClickerId">Jogos<br>Clicker / Idle</a></li>
+                <span>|</span>
+                <li><a target="_self" href="index.html#testeClickId">Teste<br>de Click</a></li>
+                <span>|</span>
+                <li><a target="_self" href="index.html#pesquisaId">Pesquisa</a></li>
+                <span>|</span>
+                <li><a target="_self" href="index.html#meuJogoId">Meu Jogo<br>Clicker</a></li>
+                <span>|</span>
+                <li><a target="_self" href="rank.html">Rank</a></li>
+                <span>|</span>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Fim do Header -->
+
+    <!-- Início do Rank -->
+
+    <div class="rank">
+        <div class="container">
+            <h1>
+                Rank do Dinheiros Clicker
+            </h1>
+            <canvas id="myChart"></canvas>
+        </div>
+    </div>
+
+    <!-- Fim do Rank -->
+
+    <!-- Início do Footer -->
+
+    <div class="footer">
+        <div class="container">
+            <p>
+                Projeto Individual de Pesquisa e inovação - <b>Jogos Clicker / Idle</b>
+            </p>
+            <p>
+                <a target="_blank" href="https://github.com/leandroTokudome/Projeto-Individual">Projeto no GitHub</a>
+            </p>
+            <p>
+                Feito por <b>Leandro Akio Tokudome</b><br>
+                RA: 02231016
+            </p>
+        </div>
+    </div>
+
+    <!-- Fim do Footer -->
+</body>
+
+</html>
+
+<script>
+    const rankChart = document.getElementById(`myChart`)
+    var jogadores = []
+    var dinheiros = []
+
+    fetch(`/medidas/rank`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+            response.json().then(function (resposta) {
+                console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                resposta.reverse();
+
+                for (i = 0; i < resposta.length; i++) {
+                    var registro = resposta[i];
+                    dinheiros.push(registro.pontos);
+                    jogadores.push(registro.nome);
+                }
+
+            });
+        } else {
+            console.error('Nenhum dado encontrado ou erro na API');
+        }
+    })
+        .catch(function (error) {
+            console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+
+    setTimeout(atualizar, 500)
+
+    function atualizar() {
+        new Chart(rankChart, {
+            type: 'bar',
+            data: {
+                labels: jogadores,
+                datasets: [{
+                    label: 'Dinheiros',
+                    data: dinheiros,
+                    borderWidth: 2
+                }]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: `#304d63`,
+                        },
+                        ticks: {
+                            color: `#f2d096`,
+                            fontSize: `50`,
+                        }
+                    },
+                    x: {
+                        grid: {
+                            color: `#304d63`
+                        },
+                        ticks: {
+                            color: `#f2d096`,
+                            fontSize: `50`,
+                        }
+                    }
+                }
+            }
+        });
+    }
+</script>

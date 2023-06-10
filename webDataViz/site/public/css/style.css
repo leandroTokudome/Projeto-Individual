@@ -854,3 +854,45 @@ body {
 }
 
 /* Fim do Registro */
+
+/* Início do Rank */
+
+.rank {
+    display: flex;
+    background-color: #323232;
+    height: 1300px;
+    flex: 1;
+    width: 100%;
+    border-bottom: #ed8975 solid 3px;
+}
+
+.rank .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.rank h1 {
+    color: #b2e7e8;
+    font-size: 62px;
+    padding-left: 3%;
+    border-radius: 8px;
+    font-style: italic;
+}
+
+.rank h1:hover {
+    color: #ed8975;
+    border-radius: 0px;
+    transition: 0.3s;
+}
+
+.rank h1:not(:hover) {
+    color: #b2e7e8;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+
+/* Fim do Rank */
