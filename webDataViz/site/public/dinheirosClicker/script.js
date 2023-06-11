@@ -46,9 +46,10 @@ dpc = 1
 
 var botaoDinheiros = document.getElementById("dinheirosButton") 
 
-botaoDinheiros.addEventListener("click", function removeFocus() {
-    this.blur();
-})
+const img = document.querySelector("img");
+img.ondragstart = () => {
+  return false;
+};
 
 function clickDinheiros() {
     realDinheiros += dpc

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dinheiros Clicker</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="../images/dinheirosClickerLogo.png">
 </head>
 
 <body>
@@ -19,8 +20,8 @@
 
             <br>
 
-            <button onclick="builds(`realCostEsp`, `espCost`, dpsEsp, qntEsp, espScale); upgradeShow(qntEsp, `idUpgEsp`, `espScale`);">Estagiário
-                da SpTech</button>
+            <button onclick="builds(`realCostEsp`, `espCost`, dpsEsp, qntEsp, espScale); upgradeShow(qntEsp, `idUpgEsp`, `espScale`);">Estagiário<br>
+                da<br>SpTech</button>
             <div>Quantidade: <span id="qntEsp">0</span></div>
             <div>Custo: <span id="espCost">15</span></div>
 
@@ -34,7 +35,7 @@
             <br>
 
             <button onclick="builds(`realCostInv`, `invCost`, dpsInv, qntInv, invScale); upgradeShow(qntInv, `idUpgInv`, `invScale`);">Investidor
-                da bolsa</button>
+                <br>da<br>bolsa</button>
             <div>Quantidade: <span id="qntInv">0</span></div>
             <div>Custo: <span id="invCost">11.000</span></div>
 
@@ -47,7 +48,7 @@
             <br>
 
             <button onclick="builds(`realCostFsp`, `fspCost`, dpsFsp, qntFsp, fspScale); upgradeShow(qntFsp, `idUpgFsp`, `fspScale`);">Formado
-                na SpTech</button>
+                <br>na<br>SpTech</button>
             <div>Quantidade: <span id="qntFsp">0</span></div>
             <div>Custo: <span id="fspCost">1.300.000</span></div>
 
@@ -68,7 +69,7 @@
             <br>
 
             <button onclick="builds(`realCostMul`, `mulCost`, dpsMul, qntMul, mulScale); upgradeShow(qntMul, `idUpgMul`, `mulScale`);">Empresa
-                Multinacional</button>
+                <br>Multinacional</button>
             <div>Quantidade: <span id="qntMul">0</span></div>
             <div>Custo: <span id="mulCost">3.300.000.000</span></div>
 
@@ -78,35 +79,36 @@
 
             <div class="dinheirosTitle">
 
-                <h1 style="font-weight: bold; font-size: 300%; color: green;">Dinheiros</h1>
+                <h1>Dinheiros</h1>
 
             </div>
 
             <div class="dinheirosDisplay">
 
-                <div id="dinheiros" style="font-size: 200%; font-weight: bold;">0</div>
+                <div id="dinheiros">0</div>
 
             </div>
 
             <br><br>
 
-            <div class="dpsAndDpcTop">
+            <div class="dpsAndDpc">
 
-                <div class="fontDps"> Dinheiros por segundo</div>
-                <div class="fontDps"> Dinheiros por clique</div>
-
-            </div>
-
-            <div class="dpsAndDpcBot">
-
-                <div id="dpsDisplay" style="margin: 30px;" class="fontDps">0</div>
-                <div id="dpcDisplay" style="margin: 30px;" class="fontDps">1</div>
+                <div class="fontDps">
+                    <p>Dinheiros por segundo</p>
+                    <div id="dpsDisplay">0</div>
+                </div>
+                <div class="fontDpc">
+                    <p>Dinheiros por clique</p>
+                    <div id="dpcDisplay">1</div>
+                </div>
 
             </div>
 
             <br><br><br>
 
-            <button onclick=clickDinheiros() class="buttonClick" id="dinheirosButton" tabindex="-1">$</button>
+            <div onclick=clickDinheiros() class="buttonClick" id="dinheirosButton" tabindex="-1">
+                <img src="../images/dinheirosNota.jpg">
+            </div>
 
             <button onclick="salvar()" id="salvar">Salvar pontuação</button>
 
@@ -123,9 +125,9 @@
             <button onclick="upgradeTemp()" id="buttonUpgTemp">
                 Aproveitar a promoção de café<br>
                 e enlouquecer<br>
-                (30x Poder do Click)<br>
-                Dura 25 segundos<br>
-                Não é possível comprar durante o efeito
+                <span>(30x Poder do Click)</span><br>
+                Dura <span>25 segundos</span>,<br>
+                <span>Não é possível comprar durante o efeito</span>
             </button>
 
             <!--Upgrades Esp-->
@@ -135,8 +137,8 @@
                 Fazer festa de boas-vindas<br>
                 pros estágiarios para fingir<br>
                 que vai dar tudo certo<br>
-                (2x Estágiario da SpTech)<br>
-                Custo: 500
+                <span>(2x Estagiário da SpTech)</span><br>
+                <span>Custo:</span> 500
             </button>
 
             <button id="idUpgEsp01" class="buttonUpg"
@@ -145,9 +147,9 @@
                 a Americanos e com a<br>
                 Ricardo Erétrico para animar<br>
                 os estagiários<br>
-                (2x Estagiário da SpTech)<br>
+                <span>(2x Estagiário da SpTech)</span><br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 3.000
+                <span>Custo:</span> 3.000
             </button>
 
             <button id="idUpgEsp02" class="buttonUpg"
@@ -155,8 +157,8 @@
                 Demitir todos os professores<br>
                 da SpTech para testar<br>
                 a independência dos alunos<br>
-                (2x Estagiário da SpTech)<br>
-                Custo: 20.000
+                <span>(2x Estagiário da SpTech)</span><br>
+                <span>Custo:</span> 20.000
             </button>
 
             <button id="idUpgEsp03" class="buttonUpg"
@@ -164,9 +166,9 @@
                 Ameaçar demitir todos os<br>
                 estagiários e a matriculá-los<br>
                 em um curso de gastronomia<br>
-                (2x Estagiário da SpTech)<br>
+                <span>(2x Estagiário da SpTech)</span><br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 150.000
+                <span>Custo:</span> 150.000
             </button>
 
             <button id="idUpgEsp04" class="buttonUpg"
@@ -175,8 +177,8 @@
                 dos alunos para<br>
                 160 horas por semana<br>
                 para treinamento leve<br>
-                (2x Estagiário da SpTech)<br>
-                Custo: 1.000.000
+                <span>(2x Estagiário da SpTech)</span><br>
+                <span>Custo:</span> 1.000.000
             </button>
 
             <button id="idUpgEsp05" class="buttonUpg"
@@ -184,9 +186,9 @@
                 Aumentar a quantidade de<br>
                 aulas de Socioemocional pois<br>
                 a galera tá pirando já<br>
-                (2x Estágiario da SpTech)<br>
+                <span>(2x Estagiário da SpTech)</span><br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 8.000.000
+                <span>Custo:</span> 8.000.000
             </button>
 
             <button id="idUpgEsp06" class="buttonUpg"
@@ -194,17 +196,17 @@
                 Distribuir anti-depressivos<br>
                 e café de graça pros<br>
                 estagiários<br>
-                (2x Estagiário da SpTech)<br>
-                Custo: 50.000.000
+                <span>(2x Estagiário da SpTech)</span><br>
+                <span>Custo:</span> 50.000.000
             </button>
 
             <button id="idUpgEsp07" class="buttonUpg"
                 onclick="upgsEsp[8] = true; upgrades(upgsEsp[8], `dpsEsp`, qntEsp, 350000000, idUpgEsp07); dpcPercentAdd(350000000); upgsEsp[8] = false;">
                 Contratar Brandão para<br>
                 presionar os estagiários<br>
-                (2x Estagiário da SpTech)<br>
+                <span>(2x Estagiário da SpTech)</span><br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 350.000.000
+                <span>Custo:</span> 350.000.000
             </button>
 
             <!--Upgrades Coach-->
@@ -215,7 +217,7 @@
                 Ritalina pros alunos<br>
                 do curso<br>
                 (2x Coach)<br>
-                Custo: 4.000
+                <span>Custo:</span> 4.000
             </button>
 
             <button id="idUpgCoach01" class="buttonUpg"
@@ -224,7 +226,7 @@
                 pra parede<br>
                 (2x Coach)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 30.000
+                <span>Custo:</span> 30.000
             </button>
 
             <button id="idUpgCoach02" class="buttonUpg"
@@ -232,7 +234,7 @@
                 Abrir curso de tomar<br>
                 banho gelado<br>
                 (2x Coach)<br>
-                Custo: 200.000
+                <span>Custo:</span> 200.000
             </button>
 
             <button id="idUpgCoach03" class="buttonUpg"
@@ -241,7 +243,7 @@
                 manerada em setembro<br>
                 (2x Coach)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo:1.400.000
+                <span>Custo:</span>1.400.000
             </button>
 
             <button id="idUpgCoach04" class="buttonUpg"
@@ -250,7 +252,7 @@
                 muito Sigma<br>
                 no pique Pik Blainderus<br>
                 (2x Coach)<br>
-                Custo: 8.000.000
+                <span>Custo:</span> 8.000.000
             </button>
 
             <button id="idUpgCoach05" class="buttonUpg"
@@ -261,7 +263,7 @@
                 fugiu da escola<br>
                 (2x Coach)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 50.000.000
+                <span>Custo:</span> 50.000.000
             </button>
 
             <button id="idUpgCoach06" class="buttonUpg"
@@ -270,7 +272,7 @@
                 TP Desinvestimentos<br>
                 e com a Uei Proteína<br>
                 (2x Coach)<br>
-                Custo: 320.000.000
+                <span>Custo:</span> 320.000.000
             </button>
 
             <button id="idUpgCoach07" class="buttonUpg"
@@ -280,7 +282,7 @@
                 para dar palestras<br>
                 (2x Coach)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 2.000.000.000
+                <span>Custo:</span> 2.000.000.000
             </button>
 
             <!--Upgrades Inv-->
@@ -291,7 +293,7 @@
                 e tornar o jingle<br>
                 do comercial no Hino Nacional<br>
                 (2x Investidor da Bolsa)<br>
-                Custo: 30.000
+                <span>Custo:</span> 30.000
             </button>
 
             <button id="idUpgInv01" class="buttonUpg"
@@ -301,7 +303,7 @@
                 e alcançar o T-novels<br>
                 (2x Investidor da Bolsa)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 200.000
+                <span>Custo:</span> 200.000
             </button>
 
             <button id="idUpgInv02" class="buttonUpg"
@@ -311,7 +313,7 @@
                 de marketing dizendo que<br>
                 ganhou um milhão em uma semana<br>
                 (2x Investidor da Bolsa)<br>
-                Custo: 1.200.000
+                <span>Custo:</span> 1.200.000
             </button>
 
             <button id="idUpgInv03" class="buttonUpg"
@@ -320,7 +322,7 @@
                 e fazer o GTA: Rio de Fuleiro<br>
                 (2x Investidor da Bolsa)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 7.200.000
+                <span>Custo:</span> 7.200.000
             </button>
 
             <button id="idUpgInv04" class="buttonUpg"
@@ -328,7 +330,7 @@
                 Investir na Jisney para<br>
                 reabrir o Clube Pinguim<br>
                 (2x Investidor da Bolsa)<br>
-                Custo: 45.000.000
+                <span>Custo:</span> 45.000.000
             </button>
 
             <button id="idUpgInv05" class="buttonUpg"
@@ -338,7 +340,7 @@
                 com o Vaustão e o Zilvio Zantos<br>
                 (2x Investidor da Bolsa)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 250.000.000
+                <span>Custo:</span> 250.000.000
             </button>
 
             <button id="idUpgInv06" class="buttonUpg"
@@ -347,7 +349,7 @@
                 e investir em causas nobres<br>
                 para dar uma boa impressão<br>
                 (2x Insvestidor da Bolsa)<br>
-                Custo: 1.500.000.000
+                <span>Custo:</span> 1.500.000.000
             </button>
 
             <button id="idUpgInv07" class="buttonUpg"
@@ -358,7 +360,7 @@
                 com o dinheiros<br>
                 (2x Investidor da Bolsa)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 9.000.000.000
+                <span>Custo:</span> 9.000.000.000
             </button>
 
             <!--Upgrades Bnk-->
@@ -369,7 +371,7 @@
                 a C9 Bancos e criar<br>
                 o Pix -2<br>
                 (2x Banco)<br>
-                Custo: 180.000
+                <span>Custo:</span> 180.000
             </button>
 
             <button id="idUpgBnk01" class="buttonUpg"
@@ -380,7 +382,7 @@
                 uma empresa fantasma de Dórinho<br>
                 (2x Banco)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 1.000.000
+                <span>Custo:</span> 1.000.000
             </button>
 
             <button id="idUpgBnk02" class="buttonUpg"
@@ -389,7 +391,7 @@
                 imprimindo mais dinheiros<br>
                 nos bancos<br>
                 (2x Banco)<br>
-                Custo: 6.000.000
+                <span>Custo:</span> 6.000.000
             </button>
 
             <button id="idUpgBnk03" class="buttonUpg"
@@ -399,7 +401,7 @@
                 uma ratazana de animal<br>
                 (2x Banco)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 40.000.000
+                <span>Custo:</span> 40.000.000
             </button>
 
             <button id="idUpgBnk04" class="buttonUpg"
@@ -409,7 +411,7 @@
                 falando "desrespeito"<br>
                 para uma atriz muito boa<br>
                 (2x Banco)<br>
-                Custo: 250.000.000
+                <span>Custo:</span> 250.000.000
             </button>
 
             <button id="idUpgBnk05" class="buttonUpg"
@@ -420,7 +422,7 @@
                 atenção e lucrar<br>
                 (2x Banco)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 1.500.000.000
+                <span>Custo:</span> 1.500.000.000
             </button>
 
             <button id="idUpgBnk06" class="buttonUpg"
@@ -428,7 +430,7 @@
                 Criar o pagamento via<br>
                 sorrisinho pra maquininha<br>
                 (2x Banco)<br>
-                Custo: 10.000.000.000
+                <span>Custo:</span> 10.000.000.000
             </button>
 
             <button id="idUpgBnk07" class="buttonUpg"
@@ -438,7 +440,7 @@
                 com um chip espião secreto<br>
                 (2x Banco)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 60.000.000.000
+                <span>Custo:</span> 60.000.000.000
             </button>
 
             <!--Upgrades Fsp-->
@@ -449,7 +451,7 @@
                 na Rua Augusto<br>
                 na noitada<br>
                 (2x Formado da SpTech)<br>
-                Custo: 1.000.000
+                <span>Custo:</span> 1.000.000
             </button>
 
             <button id="idUpgFsp01" class="buttonUpg"
@@ -460,7 +462,7 @@
                 para aprender diagramas<br>
                 (2x Formado da SpTech)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 6.000.000
+                <span>Custo:</span> 6.000.000
             </button>
 
             <button id="idUpgFsp02" class="buttonUpg"
@@ -469,7 +471,7 @@
                 pro campeonato mundial<br>
                 de sinuca<br>
                 (2x Foramdo da SpTech)<br>
-                Custo: 40.000.000
+                <span>Custo:</span> 40.000.000
             </button>
 
             <button id="idUpgFsp03" class="buttonUpg"
@@ -480,7 +482,7 @@
                 social<br>
                 (2x Formado da SpTech)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 250.000.000
+                <span>Custo:</span> 250.000.000
             </button>
 
             <button id="idUpgFsp04" class="buttonUpg"
@@ -489,7 +491,7 @@
                 para eles lembrarem o que<br>
                 é vida de novo<br>
                 (2x Formado da SpTech)<br>
-                Custo: 1.500.000.000
+                <span>Custo:</span> 1.500.000.000
             </button>
 
             <button id="idUpgFsp05" class="buttonUpg"
@@ -499,7 +501,7 @@
                 que eles são gente<br>
                 (2x Formado da SpTech)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 9.000.000.000
+                <span>Custo:</span> 9.000.000.000
             </button>
 
             <button id="idUpgFsp06" class="buttonUpg"
@@ -509,7 +511,7 @@
                 pensarem que vão ter tempo<br>
                 para gastar<br>
                 (2x Formado da SpTech)<br>
-                Custo: 55.000.000.000
+                <span>Custo:</span> 55.000.000.000
             </button>
 
             <button id="idUpgFsp07" class="buttonUpg"
@@ -519,7 +521,7 @@
                 com a Entidade de Deus<br>
                 (2x Formado da SpTech)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 350.000.000.000
+                <span>Custo:</span> 350.000.000.000
             </button>
 
             <!--Upgrades Cas-->
@@ -531,7 +533,7 @@
                 sempre ter um Royal<br>
                 na mão<br>
                 (2x Cassino)<br>
-                Custo: 5.250.000
+                <span>Custo:</span> 5.250.000
             </button>
 
             <button id="idUpgCas01" class="buttonUpg"
@@ -541,7 +543,7 @@
                 chance de vitória<br>
                 (2x Cassino)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 30.000.000
+                <span>Custo:</span> 30.000.000
             </button>
 
             <button id="idUpgCas02" class="buttonUpg"
@@ -550,7 +552,7 @@
                 Tuístedi Fato<br>
                 como Dealer<br>
                 (2x Cassino)<br>
-                Custo: 200.000.000
+                <span>Custo:</span> 200.000.000
             </button>
 
             <button id="idUpgCas03" class="buttonUpg"
@@ -560,7 +562,7 @@
                 da sorte<br>
                 (2x Cassino)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 1.200.000.000
+                <span>Custo:</span> 1.200.000.000
             </button>
 
             <button id="idUpgCas04" class="buttonUpg"
@@ -569,7 +571,7 @@
                 para competir em torneios<br>
                 em seu nome<br>
                 (2x Cassino)<br>
-                Custo: 7.200.000.000
+                <span>Custo:</span> 7.200.000.000
             </button>
 
             <button id="idUpgCas05" class="buttonUpg"
@@ -578,7 +580,7 @@
                 Brazina 888<br>
                 (2x Cassino)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 43.000.000.000
+                <span>Custo:</span> 43.000.000.000
             </button>
 
             <button id="idUpgCas06" class="buttonUpg"
@@ -587,7 +589,7 @@
                 criar a regra de ter que<br>
                 jogar gritando se não perde<br>
                 (2x Cassino)<br>
-                Custo: 250.000.000.000
+                <span>Custo:</span> 250.000.000.000
             </button>
 
             <button id="idUpgCas07" class="buttonUpg"
@@ -597,7 +599,7 @@
                 sertão nordestino<br>
                 (2x Cassino)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 1.000.000.000.000
+                <span>Custo:</span> 1.000.000.000.000
             </button>
 
             <!--Upgrades Pol-->
@@ -609,7 +611,7 @@
                 e virar parça do<br>
                 Ursinho Poohf<br>
                 (2x Político)<br>
-                Custo: 30.000.000
+                <span>Custo:</span> 30.000.000
             </button>
 
             <button id="idUpgPol01" class="buttonUpg"
@@ -619,7 +621,7 @@
                 no Seáza<br>
                 (2x Político)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 200.000.000
+                <span>Custo:</span> 200.000.000
             </button>
 
             <button id="idUpgPol02" class="buttonUpg"
@@ -629,7 +631,7 @@
                 junto com um Rédi Dédi 2 que<br>
                 é melhor que Gódi ofe Uare<br>
                 (2x Político)<br>
-                Custo: 1.200.000.000
+                <span>Custo:</span> 1.200.000.000
             </button>
 
             <button id="idUpgPol03" class="buttonUpg"
@@ -640,7 +642,7 @@
                 que é como deve ser<br>
                 (2x Político)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 7.200.000.000
+                <span>Custo:</span> 7.200.000.000
             </button>
 
             <button id="idUpgPol04" class="buttonUpg"
@@ -649,7 +651,7 @@
                 um salgado e uma<br>
                 coca<br>
                 (2x Político)<br>
-                Custo: 45.000.000.000
+                <span>Custo:</span> 45.000.000.000
             </button>
 
             <button id="idUpgPol05" class="buttonUpg"
@@ -660,7 +662,7 @@
                 do Burázil<br>
                 (2x Político)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 300.000.000.000
+                <span>Custo:</span> 300.000.000.000
             </button>
 
             <button id="idUpgPol06" class="buttonUpg"
@@ -670,7 +672,7 @@
                 e o suor dos trabalhadores Burázileros<br>
                 como parte de um Stand-Up<br>
                 (2x Político)<br>
-                Custo: 1.800.000.000.000
+                <span>Custo:</span> 1.800.000.000.000
             </button>
 
             <button id="idUpgPol07" class="buttonUpg"
@@ -679,7 +681,7 @@
                 na sociedade<br>
                 (2x Político)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 7.000.000.000.000
+                <span>Custo:</span> 7.000.000.000.000
             </button>
 
             <!--Upgrades Mul-->
@@ -690,7 +692,7 @@
                 e o Frive e dominar<br>
                 os jogos Browser<br>
                 (2x Empresa Multinacional)<br>
-                Custo: 165.000.000
+                <span>Custo:</span> 165.000.000
             </button>
 
             <button id="idUpgMul01" class="buttonUpg"
@@ -699,7 +701,7 @@
                 lançar o Half-Death 3<br>
                 (2x Empresa Multinacional)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 700.000.000
+                <span>Custo:</span> 700.000.000
             </button>
 
             <button id="idUpgMul02" class="buttonUpg"
@@ -707,7 +709,7 @@
                 Comprar a Granchrroll e<br>
                 lançar o Norakami 3<br>
                 (2x Empresa Multinacional)<br>
-                Custo: 4.200.000.000
+                <span>Custo:</span> 4.200.000.000
             </button>
 
             <button id="idUpgMul03" class="buttonUpg"
@@ -716,7 +718,7 @@
                 e criar o Small Mac<br>
                 (2x Empresa Multinacional)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 25.000.000.000
+                <span>Custo:</span> 25.000.000.000
             </button>
 
             <button id="idUpgMul04" class="buttonUpg"
@@ -725,7 +727,7 @@
                 e construir uma<br>
                 Jisney Land no Burázil<br>
                 (2x Empresa Multinacional)<br>
-                Custo: 150.000.000.000
+                <span>Custo:</span> 150.000.000.000
             </button>
 
             <button id="idUpgMul05" class="buttonUpg"
@@ -734,14 +736,14 @@
                 e fugir da Terra<br>
                 (2x Empresa Multinacional)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 1.000.000.000.000
+                <span>Custo:</span> 1.000.000.000.000
             </button>
 
             <button id="idUpgMul06" class="buttonUpg"
                 onclick="upgsMul[7] = true; upgrades(upgsMul[7], `dpsMul`, qntMul, 6000000000000, idUpgMul06);upgsMul[7] = false;">
                 Comprar o Élen Must<br>
                 (2x Empresa Multinacional)<br>
-                Custo: 6.000.000.000.000
+                <span>Custo:</span> 6.000.000.000.000
             </button>
 
             <button id="idUpgMul07" class="buttonUpg"
@@ -752,7 +754,7 @@
                 Dinheiros's Land<br>
                 (2x Empresa Multinacional)<br>
                 (Clique ganha 1% do Dps)<br>
-                Custo: 36.000.000.000.000
+                <span>Custo:</span> 36.000.000.000.000
             </button>
 
         </div>
