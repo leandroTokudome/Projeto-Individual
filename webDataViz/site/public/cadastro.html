@@ -88,10 +88,12 @@
         var confirmacaoSenhaVar = confirmarSenha.value;
 
         if (nomeVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
-            cardErro.style.display = "block"
-            mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
-
             return false;
+        }
+
+        if (senha.value != confirmarSenha.value) {
+            alert(`Senhas incompatíveis`)
+            return false
         }
 
         fetch("/usuarios/cadastrar", {
