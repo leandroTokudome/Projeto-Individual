@@ -65,7 +65,7 @@ body {
     flex-wrap: wrap;
     flex: 1;
     align-items: center;
-    background-image: url("../images/backGround.jpg");
+    background-image: url("../images/background.jpg");
     height: 1000px;
     border-bottom: #ed8975 solid 2px;
 }
